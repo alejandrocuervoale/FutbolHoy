@@ -2,27 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Futbol Hoy - Resultados en Vivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futbol Hoy - Resultados y Tablas</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: #f5f5f5;
     }
     header {
       background: #008000;
       color: white;
-      padding: 1em 0;
+      text-align: center;
+      padding: 20px;
     }
-    h1 {
-      margin: 0;
-    }
+    h1 { margin: 0; }
     section {
-      margin: 20px auto;
-      max-width: 900px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      margin-bottom: 30px;
     }
     .whatsapp {
       position: fixed;
@@ -39,36 +42,80 @@
       text-decoration: none;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
-    iframe {
-      border: none;
-      width: 100%;
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 50px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>⚽ Futbol Hoy</h1>
-    <p>Resultados en vivo, noticias y más</p>
-  </header>
+<header>
+  <h1>⚽ Futbol Hoy</h1>
+  <p>Resultados en vivo, tablas y noticias actualizadas</p>
+</header>
 
-  <section>
-    <h2>Resultados en Vivo</h2>
-    <div id="sofascore-widget"></div>
-    <!-- Script oficial del widget SofaScore -->
-    <script async type="text/javascript" src="https://www.sofascore.com/widget/live-score-widget.js"></script>
-  </section>
+<section>
+  <h2>Tabla de posiciones - Liga Argentina</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/156467/season/77826/standings/Group%20A"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
 
-  <section>
-    <h2>Noticias - TyC Sports</h2>
-    <!-- Widget de noticias usando FeedWind (ejemplo funcional) -->
-    <div id="tyc-feed">
-      <iframe src="https://feed.mikle.com/widget/v2/168057/" height="400"></iframe>
-    </div>
-  </section>
+<section>
+  <h2>Premier League</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/17/season/52086/standings/Overall"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
 
-  <!-- Botón de WhatsApp -->
-  <a class="whatsapp" href="https://wa.me/XXXXXXXXXXX" target="_blank">📞</a>
+<section>
+  <h2>LaLiga</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/8/season/52075/standings/Overall"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
+
+<section>
+  <h2>Serie A</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/23/season/52091/standings/Overall"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
+
+<section>
+  <h2>Bundesliga</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/35/season/52096/standings/Overall"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
+
+<section>
+  <h2>Ligue 1</h2>
+  <iframe 
+    src="https://widgets.sofascore.com/es-ES/embed/tournament/34/season/52095/standings/Overall"
+    style="height:923px; max-width:768px;">
+  </iframe>
+</section>
+
+<section>
+  <h2>Noticias - ESPN</h2>
+  <!-- Si ESPN no ofrece widget oficial usa FeedWind como ejemplo -->
+  <iframe src="https://feed.mikle.com/widget/v2/168059/" height="400"></iframe>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5491138443338" target="_blank">📞</a>
+
+<footer>
+  © 2025 Futbol Hoy | Información ofrecida por SofaScore & ESPN
+</footer>
 
 </body>
 </html>
